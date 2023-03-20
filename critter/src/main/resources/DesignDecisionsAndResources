@@ -1,0 +1,24 @@
+User -parent class was created which contains shared fields of Customer and Employee.
+The Customer sub-class contains details of Owners of Pets.
+The Employee sub-class contains details of Employee who can offer pet services.
+The Inheritance strategy used was  InheritanceType.JOINED as I wanted to save the shared fields in the
+parent user table and only non-shared fields in respective customer and employee table.
+The Pet class contains details of Pet.
+The Schedule contains details of pet, employees, date and activities.
+
+The relationship between Customer and Pet was designed as One-Many as a
+single customer can have multiple pets and the association was bi-directional.
+The relationship between Pet and Schedule and Customer/Schedule was chosen as Many-Many with
+bi-directional association as one pet can have one or more schedules and
+One schedule can have one or more pets.
+
+The persistence strategy used was Spring Data JPA with Hibernate implementation.
+
+For enums like Pet type and Employee Skill, @ElementCollection was chosen.
+
+ Resources Used:
+ 1)Udacity course DataSource and Persistence course lessons
+ 2)Udacity Connect session DataSource and Persistence slides
+ 3)https://stackabuse.com/a-guide-to-jpa-with-hibernate-relationship-mapping/
+ 4)https://www.baeldung.com/spring-data-crud-repository-save
+ 5)https://www.youtube.com/watch?v=IucFDX3RO9U&t=1112s
